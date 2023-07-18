@@ -1,33 +1,41 @@
 <template>
+    <div class="container mx-auto px-4">
+      
+      <div>
+        <div class="flex items-center space-x-2 text-base">
+          <h4 class="font-semibold text-slate-900">Contributors</h4>
+          <span class="rounded-full bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-700">204</span>
+        </div>
+        <div class="mt-3 flex -space-x-2 overflow-hidden">
+          {#each contributors as user}
+            <img class="inline-block h-12 w-12 rounded-full ring-2 ring-white" src="{user.avatarUrl}" alt="{user.handle}"/>
+          {/each}
+        </div>
+        <div class="mt-3 text-sm font-medium">
+          <a href="#" class="text-blue-500">+ 198 others</a>
+        </div>
+      </div>
+      <button @click="toggleTheme" class="btn-primary">切换主题</button>
+      <div class="">This is responsive!</div>
+      <div class="p-6 max-w-sm mx-auto bg-black rounded-xl shadow-lg flex items-center space-x-4">
+         Settings
+      </div>
+      <div id="app"></div>
 
+      <!-- <button class="bg-sky-500 px-8 text-left hover:bg-sky-700">
+        Save changes
+      </button> -->
+      <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
+        <!-- <div class="shrink-0">
+          <img class="h-12 w-12" src="/img/logo.svg" alt="ChitChat Logo">
+        </div> -->
+        <div>
+          <div class="text-xl font-medium text-black">ChitChat</div>
+          <p class="text-slate-500">You have a new message!</p>
+        </div>
 
-    <div class="bg-gray-100 flex justify-center items-center min-h-screen">
-      <div class="w-full max-w-md p-4 bg-white rounded-lg shadow-md">
-    <h2 class="text-2xl font-semibold mb-4">Sign In</h2>
-    <form class="mb-4">
-      <div class="mb-4">
-        <input type="text" id="username" name="username" placeholder="Username" class="w-full border px-3 py-2 rounded-lg focus:ring-blue-500 focus:border-blue-500">
-        <!-- 错误提示 -->
-        <div class="text-red-500 text-sm" id="username-error"></div>
       </div>
-      <div class="mb-4">
-        <input type="password" id="password" name="password" placeholder="Password" class="w-full border px-3 py-2 rounded-lg focus:ring-blue-500 focus:border-blue-500">
-        <!-- 错误提示 -->
-        <div class="text-red-500 text-sm" id="password-error"></div>
-      </div>
-      <!-- 忘记密码链接 -->
-      <div class="text-right mt-2">
-        <a href="#" class="text-blue-500">Forgot Password?</a>
-      </div>
-      <button type="submit" class="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-600">Login</button>
-    </form>
-    <!-- 第三方登录按钮 -->
-    <div class="flex flex-wrap justify-center space-x-4 mt-4">
-      <button class="bg-red-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-red-600">Google Login</button>
-      <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-600 mt-2 sm:mt-0">Facebook Login</button>
     </div>
-  </div>
-      </div>
 </template>
 
 <script setup>
