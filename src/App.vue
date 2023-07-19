@@ -2,6 +2,8 @@
    <div class="">
     <header class="bg-white">
         <nav class="flex justify-between items-center w-[92%]  mx-auto py-3">
+          <font-awesome-icon icon="user-secret" />
+
             <div class="text-slate-950 text-clip font-bold">
               logo
                 <!-- <img class="w-16 cursor-pointer" src="" alt="..."> -->
@@ -58,7 +60,9 @@
       <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
           <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
               <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white text-center">
-                  Sign in 
+                  Sign in     
+                  <font-awesome-icon class="text-lime-500" icon="fa-user-secret" />
+
               </h1>
               <form class="space-y-4 md:space-y-6" action="#">
                   <div>
@@ -85,6 +89,22 @@
                       Don’t have an account yet? <a href="#" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
                   </p>
               </form>
+              <div class="flex items-center mt-6">
+                <hr class="flex-grow border-gray-400 border-t">
+                <span class="mx-4 text-gray-500">or</span>
+                <hr class="flex-grow border-gray-400 border-t">
+              </div>
+
+              <div class="flex justify-center mt-6">
+              <!-- Third-party login buttons here -->
+              <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">
+                <font-awesome-icon class="text-lime-500" icon="google" /> Google
+              </button>
+              <button class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded ml-4">
+                <font-awesome-icon class="text-lime-500" icon="facebook-f" />   Facebook
+              </button>
+            </div>
+
           </div>
       </div>
   </div>
@@ -166,7 +186,8 @@ onMounted(() => {
 });
 </script>
 
-<style>
+<style >
+
 body {
   margin: 0;
   overflow: hidden;
