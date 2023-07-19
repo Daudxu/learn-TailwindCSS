@@ -7,16 +7,16 @@ export default {
     ],
     theme: {
       extend: {
-        colors: {
-          light: {
-            background: '#ffffff',
-            text: '#333333',
-          },
-          dark: {
-            background: '#333333',
-            text: '#ffffff',
-          },
-        },
+        // colors: {
+        //   light: {
+        //     background: '#ffffff',
+        //     text: '#333333',
+        //   },
+        //   dark: {
+        //     background: '#333333',
+        //     text: '#ffffff',
+        //   },
+        // },
       },
     },
     fontFamily: {
