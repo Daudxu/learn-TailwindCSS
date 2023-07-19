@@ -60,8 +60,8 @@
       <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
           <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
               <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white text-center">
-                  Sign in     
-                  <font-awesome-icon class="text-lime-500" icon="fa-user-secret" />
+                  Sign in     <font-awesome-icon class="text-lime-500" icon="user-secret" />
+                  <!-- <font-awesome-icon :icon="['fab', 'twitter']" /> -->
 
               </h1>
               <form class="space-y-4 md:space-y-6" action="#">
@@ -101,7 +101,8 @@
                 <font-awesome-icon class="text-lime-500" icon="google" /> Google
               </button>
               <button class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded ml-4">
-                <font-awesome-icon class="text-lime-500" icon="facebook-f" />   Facebook
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/>
+                </svg>   Facebook
               </button>
             </div>
 
