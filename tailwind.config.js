@@ -6,17 +6,13 @@ export default {
       "./src/**/*.{vue,js,ts,jsx,tsx}",
     ],
     theme: {
+      dark: 'class', 
       extend: {
-        // colors: {
-        //   light: {
-        //     background: '#ffffff',
-        //     text: '#333333',
-        //   },
-        //   dark: {
-        //     background: '#333333',
-        //     text: '#ffffff',
-        //   },
-        // },
+        backgroundColor: {
+          
+        },
+        colors: {
+        },
       },
     },
     fontFamily: {
