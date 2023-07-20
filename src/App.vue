@@ -25,7 +25,12 @@
                 </div>
                 <div class="flex items-center gap-6">
                     <button @click="toggleIcon" class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">Sign in</button>
-                          <!-- sun icon -->
+                    <div class="avatar online">
+                      <div class="w-12 rounded-full">
+                        <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                      </div>
+                    </div>
+                    <!-- sun icon -->
                     <svg v-if="isOpen"  class="rotate-icon fill-current w-10 h-10 dark:text-sky-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/></svg>
                     
                     <!-- moon icon -->
@@ -56,8 +61,10 @@
           <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
               <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white text-center">
                   Sign in     <font-awesome-icon class="text-lime-500" icon="user-secret" />
-                  <!-- <font-awesome-icon :icon="['fab', 'twitter']" /> -->
-
+                  <font-awesome-icon class="text-lime-500" icon="circle-check" />
+                  <font-awesome-icon :icon="['fab', 'facebook']" class="text-lime-500"></font-awesome-icon>
+                  <font-awesome-icon :icon="['fab', 'twitter']" class="text-lime-500"></font-awesome-icon>
+                  <font-awesome-icon :icon="['fab', 'google']" class="text-lime-500"></font-awesome-icon>
               </h1>
               <form class="space-y-4 md:space-y-6" action="#">
                   <div>
@@ -79,7 +86,7 @@
                       </div>
                       <a href="#" class="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Forgot password?</a>
                   </div>
-                  <button type="submit" class="w-full text-white bg-blue-600 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-primary-800">Sign in</button>
+                  <button type="submit" class="w-full min-w-[300px] text-white bg-blue-600 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-primary-800">Sign in</button>
                   <p class="text-sm font-light text-gray-500 dark:text-gray-400">
                       Don’t have an account yet? <a href="#" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
                   </p>
@@ -90,16 +97,16 @@
                 <hr class="flex-grow border-gray-400 border-t">
               </div>
 
-              <div class="flex justify-center mt-6">
-              <!-- Third-party login buttons here -->
-              <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">
-                <font-awesome-icon class="text-lime-500" icon="google" /> Google
-              </button>
-              <button class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded ml-4">
-                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/>
-                </svg>   Facebook
-              </button>
-            </div>
+              <div class="flex flex-wrap justify-center sm:justify-between mt-6">
+                  <button class="bg-[#e2e8f0] hover:bg-white text-[#171717] min-w-full md:min-w-[180px]  flex justify-center items-center font-semibold py-2 px-4 rounded">
+                    <svg version="1.1" class="mr-2" enable-background="new 0 0 19 19"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 19 19" xml:space="preserve" style="width: 20px;"><g id="logo_googleg_48dp" transform="translate(15.000000, 15.000000)"><path id="Shape" class="st0" fill="#4285F4" d="M3.31-5.13c0-0.64-0.06-1.25-0.16-1.84h-8.48v3.48h4.84c-0.21,1.12-0.84,2.08-1.8,2.72v2.26h2.91 C2.32-0.08,3.31-2.39,3.31-5.13L3.31-5.13z"></path><path id="Shape_1_" class="st1" fill="#34A853" d="M-5.33,3.67c2.43,0,4.47-0.81,5.96-2.18l-2.91-2.26c-0.81,0.54-1.84,0.86-3.05,0.86 c-2.34,0-4.33-1.58-5.04-3.71h-3.01v2.33C-11.9,1.65-8.85,3.67-5.33,3.67L-5.33,3.67z"></path><path id="Shape_2_" class="st2" fill="#FBBC05" d="M-10.37-3.62c-0.18-0.54-0.28-1.12-0.28-1.71s0.1-1.17,0.28-1.71v-2.33h-3.01 c-0.61,1.22-0.96,2.59-0.96,4.04s0.35,2.83,0.96,4.04L-10.37-3.62L-10.37-3.62z"></path><path id="Shape_3_" class="st3" fill="#EA4335" d="M-5.33-10.75c1.32,0,2.51,0.45,3.44,1.35l2.58-2.58c-1.56-1.45-3.6-2.34-6.02-2.34 c-3.52,0-6.56,2.02-8.04,4.96l3.01,2.33C-9.66-9.17-7.68-10.75-5.33-10.75L-5.33-10.75z"></path><path id="Shape_4_" class="st4" fill="none" d="M-14.33-14.33h18v18h-18V-14.33z"></path></g>
+                    </svg>Google
+                  </button>
+                  <button class="bg-blue-500 hover:bg-blue-600 text-white min-w-full md:min-w-[180px] flex justify-center items-center  font-semibold py-2 px-4 rounded mt-4 md:ml-4 md:mt-0 ">
+                    <svg version="1.1" class="mr-2"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 115 219" enable-background="new 0 0 115 219" xml:space="preserve" style="width: 10px; margin: 0px 6px; fill: rgb(255, 255, 255);"><path id="f" d="M74.61,219.06v-99.8h33.5l5.02-38.9H74.61V55.53c0-11.26,3.13-18.93,19.27-18.93l20.6-0.01V1.8 c-3.56-0.47-15.79-1.53-30.01-1.53c-29.7,0-50.02,18.13-50.02,51.41v28.68H0.86v38.9h33.58v99.8H74.61z"></path>
+                    </svg>Facebook
+                  </button>
+              </div>
 
           </div>
       </div>
