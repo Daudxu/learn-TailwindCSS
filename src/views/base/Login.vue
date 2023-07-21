@@ -1,10 +1,9 @@
 <template>
-  <section class="bg-gray-50 dark:bg-gray-900 min-h-[100vh]" >
-       <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-         <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
-           <div class="p-6 space-y-4 md:space-y-6 sm:p-8  relative">
+ <authentication-slot>
+ <div class="w-full  bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+           <div class="p-6 space-y-4 md:space-y-6 sm:p-8  relative ">
                <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white text-center">
-                 <font-awesome-icon class="text-lime-500 mr-2" icon="user-secret" />Sign in     
+                 <font-awesome-icon class="text-lime-500 mr-2" icon="user-secret" />Sign In     
                </h1>
                <span class="absolute  top-3 text-slate-700 left-8 cursor-pointer dark:text-slate-400">Home</span>
                <form class="space-y-4 md:space-y-6" action="#">
@@ -27,12 +26,12 @@
                              <label for="remember" class="text-gray-500 dark:text-gray-300">Remember me</label>
                            </div>
                        </div>
-                       <a href="#" class="text-sm text-black dark:text-white font-medium text-primary-600 hover:underline dark:text-primary-500">Forgot password?</a>
-                   </div>
+                       <router-link class="text-sm text-black dark:text-white font-medium text-primary-600 hover:underline dark:text-primary-500 " to="/forgot">Forgot password?</router-link>
+                      </div>
                    <div class="text-red-500 text-sm" id="password-error"></div>
                    <button type="submit" class="w-full md:min-w-[300px]  text-white bg-blue-600 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-primary-800">Sign in</button>
                    <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-                       Don’t have an account yet? <a href="#" class="font-medium hover:underline text-blue-600">Sign up</a>
+                       Don’t have an account yet? <router-link class="cl-font-medium hover:underline font-medium text-blue-600 " to="/register">Sign up</router-link>
                    </p>
                </form>
                <div class="flex items-center mt-6">
@@ -51,15 +50,13 @@
                      </svg>Facebook
                    </button>
                </div>
- 
            </div>
        </div>
-   </div>
- </section>
-
+      </authentication-slot>
  </template>
  
  <script setup>
+ import AuthenticationSlot from './AuthenticationSlot.vue'
  import { useDark } from '@vueuse/core'
  const isDark = useDark()
  // const { x, y } = useMouse()
@@ -70,9 +67,6 @@
  </script>
  
  <style  lang="less">
-    body {
-       overflow: hidden;
-    }
     .gradient-bg {
       animation: gradientAnimation 15s linear infinite;
     }

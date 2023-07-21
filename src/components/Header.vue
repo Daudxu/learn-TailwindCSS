@@ -1,5 +1,5 @@
 <template>
-   <header class="bg-white dark:bg-[#212233e6]">
+   <header class="bg-slate-100 dark:bg-[#212233e6]">
          <nav class="flex justify-between items-center w-[92%]  mx-auto py-3">
                  <div class="flex"> 
                      <div class="text-slate-950 font-bold">

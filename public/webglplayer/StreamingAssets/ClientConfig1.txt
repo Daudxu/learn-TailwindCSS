@@ -1,0 +1,7 @@
+{
+	"WebRoot": "http://172.17.70.13/digiclient/",
+	"CanChangeService": true,
+	"DebugLevel":10,
+	"Platform": "DiGiWeb",
+	"LoginType":0
+}

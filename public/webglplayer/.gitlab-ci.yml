@@ -1,0 +1,27 @@
+stages:
+    - deploy_devel
+    - deploy_release
+    
+variables:
+    GIT_STRATEGY: clone
+    GIT_SUBMODULE_STRATEGY: recursive
+
+deploy:devel:
+    stage: deploy_devel
+    only:
+        - /^devel-.*$/
+    tags:
+        - internal-runner
+    script:
+        - ansible-playbook $CI_PROJECT_DIR/ansible_playbook/bilinSites.yml -i $CI_PROJECT_DIR/ansible_playbook/inventory/bilin_sites_hosts -b --extra-vars "project_dist_path=$CI_PROJECT_DIR" --limit "cdn_devel" -u ops
+        - echo "Success!"
+
+deploy:release:
+    stage: deploy_release
+    only:
+        - /^release-.*$/
+    tags:
+        - internal-runner
+    script:
+        - ansible-playbook $CI_PROJECT_DIR/ansible_playbook/bilinSites.yml -i $CI_PROJECT_DIR/ansible_playbook/inventory/bilin_sites_hosts -b --extra-vars "project_dist_path=$CI_PROJECT_DIR" --limit "cdn_release" -u ops
+        - echo "Success!"

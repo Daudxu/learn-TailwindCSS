@@ -1,0 +1,7 @@
+{
+	"WebRoot": "http://58.40.80.122:8005/DigiView/",
+	"CanChangeService": true,
+	"DebugLevel":5,
+	"Platform": "DiGiWeb",
+	"LoginType":0
+}

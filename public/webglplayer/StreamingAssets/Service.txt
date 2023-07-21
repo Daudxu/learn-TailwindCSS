@@ -1,0 +1,21 @@
+{
+	"status": true,
+	"data": {
+		"platform": {
+			"p_id": "999",
+			"p_name": "test",
+			"p_type": "test"
+		},
+		"serverlist": [{
+			"serverid": 101,
+			"dispid": 100,
+			"name": "Test",
+			"ip1": "115.182.75.74",
+			"ip2": "115.182.75.74",
+			"game_port": "6108",
+			"open_time": "2016-12-04 11:00:00",
+			"status": 1,
+			"group": "Test"
+		}]
+	}
+}
