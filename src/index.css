@@ -1,15 +1,19 @@
 /* index.css */
 /* Light Mode 样式 */
 :root {
-    --bg-color: #ffffff;
-    --text-color: #333333;
-  }
+  --bg-color: #ffffff;
+  --text-color: #333333;
+}
   
   /* Dark Mode 样式 */
-  :root:not(.light) {
-    --bg-color: #333333;
-    --text-color: #ffffff;
-  }
+:root.dark {
+  --bg-color: #333333;
+  --text-color: #ffffff;
+}
+/* :root:not(.light) {
+  --bg-color: #333333;
+  --text-color: #ffffff;
+} */
   
   /* 应用主题样式 */
   body {
