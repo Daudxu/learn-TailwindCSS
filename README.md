@@ -4,4 +4,6 @@
 
 ## yarn dev
 
-## yarb start
+## yarn start
+
+## yarn prod
