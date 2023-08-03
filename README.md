@@ -7,3 +7,5 @@
 ## yarn start
 
 ## yarn prod
+
+## yarn test
